@@ -1,6 +1,7 @@
 const { createApp } = Vue
 
-//const slideElement = document.getElementsByClassName('slide')
+const slideElement = document.getElementsByClassName('slide')
+let slideAttiva = 0
 
 createApp({
   data() {
@@ -37,8 +38,6 @@ createApp({
               text: "Marvel's Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.",
             },
         ],  
-        slideAttiva: 0
-
     }
   },
   methods: {
@@ -53,8 +52,6 @@ createApp({
 	    prossimaSlide.classList.add("d-block")
     },
     
-    //Al click sulla freccia cambia l'immagine verso destra
-    
     arrowRight () {
     
         let slideCorrente = slideElement[slideAttiva]
@@ -65,7 +62,6 @@ createApp({
 	    let prossimaSlide = slideElement[slideAttiva]
 	    prossimaSlide.classList.add("d-block")
     }
-    
   }
   
 }).mount('#app')
