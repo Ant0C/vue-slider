@@ -15,9 +15,9 @@ img {
     position: relative;
 }
 
-/* .slide{
+.slide{
     display: none;
-}  */
+} 
 
 .arrow__carousel {
     position: absolute;

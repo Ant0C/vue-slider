@@ -14,17 +14,17 @@
     {{ message }}
     <div class="container py-5">
         <div class="carousel" id="carousel">
-            <div v-for="slide in slides" class="slide">
+            <div v-for="slide in slides" :class="[slide.className]">
                 <img v-bind:src="slide.image" alt="">
                 <p class="ac_title">{{slide.title}}</p>
                 <p class="ac_text">{{slide.text}}</p>
             </div>
 
             <div class="arrow__carousel arrow-left">
-                <i class="fa-solid fa-arrow-left" @click="arrowLeft(slide)"></i>
+                <i class="fa-solid fa-arrow-left" @click="arrowLeft()"></i>
             </div>
             <div class="arrow__carousel arrow-right">
-                <i class="fa-solid fa-arrow-right" @click="arrowRight(slide)"></i>
+                <i class="fa-solid fa-arrow-right" @click="arrowRight()"></i>
             </div>
         </div>
     </div>
