@@ -46,7 +46,11 @@ createApp({
         let slideCorrente = slideElement[slideAttiva]
 	    slideCorrente.classList.remove("d-block")
 
-	    slideAttiva += 1
+	    if (slideAttiva > 0) {
+            slideAttiva--
+        } else {
+            slideAttiva = slideElement.length - 1
+        }
 
 	    let prossimaSlide = slideElement[slideAttiva]
 	    prossimaSlide.classList.add("d-block")
@@ -57,7 +61,13 @@ createApp({
         let slideCorrente = slideElement[slideAttiva]
 	    slideCorrente.classList.remove("d-block")
 
-	    slideAttiva -= 1
+        const lastIndex = slideElement.length - 1
+
+	    if (slideAttiva < lastIndex) {
+            slideAttiva += 1
+        } else {
+            slideAttiva = 0
+        }
 
 	    let prossimaSlide = slideElement[slideAttiva]
 	    prossimaSlide.classList.add("d-block")
